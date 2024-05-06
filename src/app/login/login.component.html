@@ -1,0 +1,18 @@
+<h1>Login</h1>
+
+<form>
+    <div class="p-field">
+        <label for="username">Username   </label> : 
+        <input id="username" type="text" pInputText [(ngModel)]="username" name="username" required>
+    </div>
+
+    <div class="p-field">
+        <label for="password">Password  </label> : 
+        <input id="password" type="password" pInputText [(ngModel)]="password" name="password" required>
+    </div>
+
+    <button type="submit" pButton label="Login" (click)="login()"  [disabled]="!username || !password "></button>
+    <a [routerLink]="['/register']">
+        <button pButton label="Register" class="register-button" ></button>
+    </a>
+</form>

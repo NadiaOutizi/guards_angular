@@ -1,0 +1,22 @@
+<p-card styleClass="user-form" class="flex justify-content-center">
+    <form [formGroup]="articleForm" (ngSubmit)="updateArticle()" novalidate>
+      <div class="field">
+        <label for="id" class="block">ID</label>
+        <input type="number" pInputText placeholder="ID" formControlName="id" />
+      </div>
+      <div class="field">
+        <label for="name" class="block">Name</label>
+        <input type="text" pInputText placeholder="Name" formControlName="name" />
+      </div>
+      <div class="field">
+        <label for="description" class="block">Description</label>
+        <input type="text" pInputText placeholder="Description" formControlName="description" />
+      </div>
+      <div class="field">
+        <label for="price" class="block">Price</label>
+        <input type="number" pInputText placeholder="Price" formControlName="price" />
+      </div>
+      <button pButton type="submit" label="Update" [disabled]="articleForm.invalid"></button>
+    </form>
+  </p-card>
+  

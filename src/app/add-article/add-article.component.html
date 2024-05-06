@@ -1,0 +1,29 @@
+<div >
+    <p-card  styleClass="user-form" class="flex justify-content-center" >
+        <form [formGroup]="articleForm" (ngSubmit)="addArticle()" novalidate>
+          <div class="field">
+            <label for="id" class="block">id</label>
+            <input type="number" pInputText placeholder="id" formControlName="id" />
+            <small class="p-error block" *ngIf="
+                articleForm.get('id')?.invalid && articleForm.get('id')?.dirty
+              ">
+              id is required</small>
+          </div>
+          <div class="field">
+            <label for="name" class="block">Full Name</label>
+            <input type="text" pInputText placeholder="Full Name" formControlName="name" />
+          </div>
+          <div class="field">
+            <label for="id" class="block">Price</label>
+            <input type="number" pInputText placeholder="Price" formControlName="price" />
+            <small class="p-error block" *ngIf="
+                articleForm.get('price')?.invalid && articleForm.get('price')?.dirty
+              ">
+              price is required</small>
+          </div>
+          <button pButton type="submit" label="Submit" [disabled]="articleForm.invalid"></button>
+        </form>
+      </p-card>
+
+  </div>
+  
