@@ -6,6 +6,7 @@ import { EditArticleComponent } from './edit-article/edit-article.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { authGuard } from './auth.guard';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:"register",component:RegisterComponent},
   {path:"listarticle",component:ArticleComponent},
   {path:"add",component:AddArticleComponent, canActivate: [authGuard]},
-  {path:'edit/:id', component: EditArticleComponent}
+  {path:'edit/:id', component: EditArticleComponent},
+  {path:"**",component:NotfoundComponent}
 ];
 
 @NgModule({

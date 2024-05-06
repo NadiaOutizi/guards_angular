@@ -15,6 +15,8 @@ import {TableModule} from 'primeng/table';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { PanelModule } from 'primeng/panel';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { RegisterComponent } from './register/register.component';
     EditArticleComponent,
     LoginComponent,
     RegisterComponent,
+    NotfoundComponent,
     
   ],
   imports: [
@@ -41,7 +44,7 @@ import { RegisterComponent } from './register/register.component';
     CommonModule,
     TabMenuModule,
     TableModule,
-    
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
